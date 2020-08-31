@@ -4,7 +4,7 @@ var sign = "+";
 i = 0;
 function sum_print(){
     cal = document.getElementById("cal");
-    cal.innerHTML = '<p style="font-size:30px;">'+((sum_all != 0)?sum_all:"")+((sum != 0)?sign+sum:"")+'</p>';
+    cal.innerHTML = '<p style="font-size:30px;">'+sum_all+((sum != 0)?sign+sum:"")+'</p>';
 }
 function one(){
     sum = (sum*10)+1;
@@ -51,11 +51,11 @@ function result(){
         sum_print()
     }
     else{
-        if(sign = "+"){
+        if(sign == "+"){
             sum_all += sum;
-        }else if(sign = "-"){
+        }else if(sign == "-"){
             sum_all -= sum;
-        }else if(sign = "X"){
+        }else if(sign == "X"){
             sum_all *= sum;
         }
         else{
@@ -72,11 +72,11 @@ function add(){
         sum_print()
     }
     else{
-        if(sign = "+"){
+        if(sign == "+"){
             sum_all += sum;
-        }else if(sign = "-"){
+        }else if(sign == "-"){
             sum_all -= sum;
-        }else if(sign = "X"){
+        }else if(sign == "X"){
             sum_all *= sum;
         }
         else{
@@ -89,7 +89,7 @@ function add(){
     
 }
 function sub(){
-    if(sum[i] == 0){
+    if(sum == 0){
         sum_print()
     }
     else{
@@ -110,7 +110,7 @@ function sub(){
     
 }
 function mul(){
-    if(sum[i] == 0){
+    if(sum == 0){
         sum_print()
     }
     else{
@@ -131,7 +131,7 @@ function mul(){
     
 }
 function divi(){
-    if(sum[i] == 0){
+    if(sum == 0){
         sum_print()
     }
     else{
